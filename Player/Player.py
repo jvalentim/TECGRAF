@@ -1,10 +1,11 @@
 class Player:
     def setMode(self, mode):
-        self.data = mode
-        return self.data
+        self.playable = mode
 
     def play(self):
-        if(self.data == "MP3"):
+        if(self.playable == "MP3"):
             return MP3Player.play(self)
-        elif (self.data == "Cassete"):
+        elif (self.playable == "Cassete"):
             return CassetePlayer.play(self)
+        elif (self.playable == "LP"):
+            return LPPlayer.play(self)
